@@ -2,3 +2,7 @@
 
 - Instalando o sqlIte
 - - > npm install sqlite3@4.0.2 --save-exact
+
+## O padrão DAO (28/07/2019)
+
+- 
