@@ -1,0 +1,28 @@
+{
+  "name": "curso_nodejs",
+  "version": "1.0.0",
+  "description": "Livraria Casa do Código",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "marko": "4.13.4-1",
+    "sqlite3": "4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js --ignore *.marko.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoyuki/curso_nodejs.git"
+  },
+  "author": "João Felipe Rodrigues de Assis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoyuki/curso_nodejs/issues"
+  },
+  "homepage": "https://github.com/joaoyuki/curso_nodejs#readme"
+}
