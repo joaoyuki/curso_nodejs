@@ -5,4 +5,6 @@
 
 ## O padrão DAO (28/07/2019)
 
-- 
+## DAO com Promises (28/07/2019)
+
+- O padrão do javascript para trabalhar com funções assincronas, é utilizar Promises
