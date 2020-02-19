@@ -1,7 +1,14 @@
 ## Acessando o Banco de dados (28/07/2019)
 
+- Versão do nodeJs
+- - 10.x
+
 - Instalando o sqlIte
 - - > npm install sqlite3@4.0.2 --save-exact
+
+- Rodando a aplicação
+- - Com o nodemon
+- - - npm start
 
 ## O padrão DAO (28/07/2019)
 

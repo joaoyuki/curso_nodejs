@@ -9,6 +9,9 @@ const rotas = require('../app/rotas/rotas');
 
 const bodyParser = require('body-parser');
 
+//Criamos um novo midleware para que, toda vez que a URL /estatico foi chamado,  o express vai ativar o midleware ativado pelo comando .static
+app.use('/estatico', express.static('src/app/public'));
+
 // bodyParser.urlencoded() define como o body-parser vai funcionar
 app.use(bodyParser.urlencoded({
     extended: true

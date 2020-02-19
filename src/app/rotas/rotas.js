@@ -47,6 +47,14 @@ module.exports = (app) => {
             .then(res.redirect('/livros'))
             .catch(erro => console.log(erro));        
     });
+
+    app.delete('/livros/:id', function (req, res) {
+        const idLivro = req.params.id; //O express identifica que o :alguma coisa é uma variável.
+        const livroDAO = new LivroDao(db);
+        livroDAO.remove(idLivro)
+            .then(() => res.status(200).end())
+            .catch(erro => console.log(erro));
+    });
    
 
 }
