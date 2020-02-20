@@ -36,7 +36,7 @@ module.exports = (app) => {
 
 
     app.get('/livros/form', function(req, res) {
-        res.marko(require('../views/form/form.marko'));
+        res.marko(require('../views/form/form.marko'), {livro: {} });
     });
 
     app.post('/livros', function(req, res) {
@@ -53,6 +53,17 @@ module.exports = (app) => {
         const livroDAO = new LivroDao(db);
         livroDAO.remove(idLivro)
             .then(() => res.status(200).end())
+            .catch(erro => console.log(erro));
+    });
+
+    app.get('/livros/form/:id', function(req, res) {
+        const id = req.params.id;
+        const livroDAO = new LivroDao(db);
+
+        livroDAO.buscaPorId(id)
+            .then(livro => 
+                res.marko(
+                    require('../views/form/form.marko'), {livro : livro}))
             .catch(erro => console.log(erro));
     });
    
