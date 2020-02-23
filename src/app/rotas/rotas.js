@@ -48,6 +48,15 @@ module.exports = (app) => {
             .catch(erro => console.log(erro));        
     });
 
+    app.put('/livros', function(req, res) {
+        console.log(req.body);
+
+        const livroDao = new LivroDao(db);
+        livroDao.atualiza(req.body)
+            .then(res.redirect('/livros'))
+            .catch(erro => console.log(erro));        
+    });    
+
     app.delete('/livros/:id', function (req, res) {
         const idLivro = req.params.id; //O express identifica que o :alguma coisa é uma variável.
         const livroDAO = new LivroDao(db);
